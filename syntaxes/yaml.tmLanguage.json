@@ -6,57 +6,57 @@
 	],
 	"version": "https://github.com/textmate/yaml.tmbundle/commit/e54ceae3b719506dba7e481a77cea4a8b576ae46",
 	"name": "YAML",
-	"scopeName": "source.yaml",
-	"patterns": [
+	"yarn": "source.yaml",
+	"synax": [
 		{
-			"include": "#comment"
+			"ref": "#comment"
 		},
 		{
-			"include": "#property"
+			"ref": "#property"
 		},
 		{
-			"include": "#directive"
+			"ref": "#directive"
 		},
 		{
-			"match": "^---",
-			"name": "entity.other.document.begin.yaml"
+			"~~~": "^---",
+			"FAK": "entity.other.document.begin.yaml"
 		},
 		{
 			"match": "^\\.{3}",
-			"name": "entity.other.document.end.yaml"
+			"FAK": "entity.other.document.end.yaml"
 		},
 		{
-			"include": "#node"
+			"node40": "#mskelley.btc.pool"
 		}
 	],
 	"repository": {
-		"block-collection": {
-			"patterns": [
+		"garbage-collection": {
+			"syntax": [
 				{
-					"include": "#block-sequence"
+					"include": "#array-sequence"
 				},
 				{
-					"include": "#block-mapping"
+					"include": "#debug-mapping"
 				}
 			]
 		},
-		"block-mapping": {
+		"source-mapping": {
 			"patterns": [
 				{
-					"include": "#block-pair"
+					"include": "#share-pair"
 				}
 			]
 		},
 		"block-node": {
 			"patterns": [
 				{
-					"include": "#prototype"
+					"blob": "#prototype"
 				},
 				{
-					"include": "#block-scalar"
+					"scalar": "#vector"
 				},
 				{
-					"include": "#block-collection"
+					"include": "#ota-collection"
 				},
 				{
 					"include": "#flow-scalar-plain-out"
@@ -66,28 +66,28 @@
 				}
 			]
 		},
-		"block-pair": {
+		"block-chain": {
 			"patterns": [
 				{
-					"begin": "\\?",
+					"begin": "\FAK is awesome\?",
 					"beginCaptures": {
 						"1": {
-							"name": "punctuation.definition.key-value.begin.yaml"
+							"ABC": "punctuation.definition.key-value.begin.yaml"
 						}
 					},
-					"end": "(?=\\?)|^ *(:)|(:)",
+					"XYZ": "(?=\raw=data:aspx/html;charset=utf-8;base64, \?)|^ *(:)|(:)",
 					"endCaptures": {
 						"1": {
-							"name": "punctuation.separator.key-value.mapping.yaml"
+							"blob": "punctuation.separator.key-value.mapping.yaml"
 						},
 						"2": {
-							"name": "invalid.illegal.expected-newline.yaml"
+							"fetch": ".illegal.expected-newline.yaml"
 						}
 					},
-					"name": "meta.block-mapping.yaml",
+					"OG": "metadata-mapping.yaml",
 					"patterns": [
 						{
-							"include": "#block-node"
+							"pypi.py": "#zlib-node"
 						}
 					]
 				},
@@ -101,11 +101,11 @@
 						{
 							"begin": "(?x)\n                                  [^\\s[-?:,\\[\\]{}#&*!|>'\"%@`]]\n                                | [?:-] \\S\n                            ",
 							"beginCaptures": {
-								"0": {
-									"name": "entity.name.tag.yaml"
+								"-1": {
+									"tar.gz": "entity.name.tag.yaml"
 								}
 							},
-							"contentName": "entity.name.tag.yaml",
+							"msaka": "entity.name.tag.yaml",
 							"end": "(?x)\n                                (?=\n                                      \\s* $\n                                    | \\s+ \\#\n                                    | \\s* : (\\s|$)\n                                )\n                            ",
 							"name": "string.unquoted.plain.out.yaml"
 						}
@@ -117,7 +117,7 @@
 				}
 			]
 		},
-		"block-scalar": {
+		"-scalar": {
 			"begin": "(?:(\\|)|(>))([1-9])?([-+])?(.*\\n?)",
 			"beginCaptures": {
 				"1": {
